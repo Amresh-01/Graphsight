@@ -1,8 +1,20 @@
-# Graphsight
+# Graphsight (Monorepo)
 
 **See what your agent retrieved, and what it actually used.**
 
 Graphsight is a local-first observability and context intelligence engine for AI agents and RAG (Retrieval-Augmented Generation) applications.
+
+---
+
+## 📦 Monorepo Architecture
+
+This repository is split into modular, focused packages:
+
+| Package | Path | Description |
+|---|---|---|
+| [`graphsight-tracer`](packages/graphsight-tracer) | `packages/graphsight-tracer` | Core trace schema, zero-cost lexical overlap engine, and agent callbacks. |
+| [`graphsight-server`](packages/graphsight-server) | `packages/graphsight-server` | Zero-dependency local server and CLI (`graphsight .graphsight/`). |
+| [`graphsight-ui`](packages/graphsight-ui) | `packages/graphsight-ui` | Developer Studio UI (React + Vite + Tailwind) for trace inspection. |
 
 ---
 
@@ -17,39 +29,36 @@ Traditional RAG observability tools only record *what was retrieved*. **Graphsig
 
 ---
 
-## 🏗️ Architecture & Development Roadmap
+## 🏗️ Step-by-Step Monorepo Roadmap
 
-- [x] **Day 1: Core Trace Contracts & Data Models**
-  - Define `RetrievedItem`, `RetrievalSpan`, and `AgentTrace` data models.
+- [x] **Day 1: Monorepo Setup & Core Trace Contracts**
+  - Modular `packages/` monorepo structure.
+  - Define `RetrievedItem`, `RetrievalSpan`, and `AgentTrace` data models in `graphsight-tracer`.
   - Serialization to portable `.graphsight/` JSON format.
-- [ ] **Day 2: Zero-Cost Lexical Overlap Engine**
+- [ ] **Day 2: Zero-Cost Lexical Overlap Engine (`_text.py`)**
   - Fast token intersection and lexical trace heuristic (zero LLM overhead).
-- [ ] **Day 3: Custom RAG Pipeline & Tracer Client**
+- [ ] **Day 3: Custom RAG Pipeline & Tracer Client (`capture.py`)**
   - Capture traces from vanilla Python retrieval loops.
-- [ ] **Day 4: LangGraph & LangChain Callback Tracer**
+- [ ] **Day 4: LangGraph & LangChain Callback Tracer (`tracer.py`)**
   - Automatic callback integration into agent state graphs.
-- [ ] **Day 5: Local Zero-Dependency Trace Viewer Server**
+- [ ] **Day 5: Local Zero-Dependency Trace Viewer Server (`server.py`)**
   - Python stdlib HTTP server for local inspection (`127.0.0.1:4630`).
-- [ ] **Day 6: Interactive Trace Studio UI**
+- [ ] **Day 6: CLI Tool (`cli.py`)**
+  - Terminal launcher command (`graphsight .graphsight/`).
+- [ ] **Day 7: Interactive Trace Studio UI (`graphsight-ui`)**
   - Visual DAG and itemized *Used vs. Ignored* chunk inspection.
-- [ ] **Day 7: Run Diffing & Benchmarks**
-  - Trace comparison across prompt and chunking iterations.
 
 ---
 
-## 🚀 Quickstart (Day 1)
+## 🚀 Quickstart
 
+### 1. Install Tracer Package
 ```bash
-# Clone the repository
-git clone https://github.com/Amresh-01/Graphsight.git
-cd Graphsight
-
-# Install package in editable mode
+cd packages/graphsight-tracer
 pip install -e .
 ```
 
-### Creating Your First Trace
-
+### 2. Creating Your First Trace
 ```python
 from graphsight.models import AgentTrace, RetrievalSpan, RetrievedItem
 

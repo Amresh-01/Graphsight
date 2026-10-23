@@ -3,9 +3,9 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "graphsight"
+name = "graphsight-tracer"
 version = "0.1.0"
-description = "Observability and context intelligence engine for AI agents and RAG pipelines"
+description = "Lightweight trace contract and lexical overlap engine for AI agents"
 readme = "README.md"
 authors = [{ name = "Amresh" }]
 license = { text = "MIT" }

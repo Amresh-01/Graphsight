@@ -1,7 +1,7 @@
-"""Tests for Day 1 trace data models."""
+"""Tests for graphsight-tracer schema."""
 
 from pathlib import Path
-from graphsight.models import AgentTrace, RetrievalSpan, RetrievedItem
+from graphsight_tracer.schema import AgentTrace, RetrievalSpan, RetrievedItem
 
 
 def test_retrieved_item_used_status():

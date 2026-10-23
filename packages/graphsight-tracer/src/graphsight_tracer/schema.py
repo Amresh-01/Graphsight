@@ -1,4 +1,4 @@
-"""Core data models defining Graphsight trace contracts."""
+"""Core schema defining Graphsight trace contracts."""
 
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ class RetrievedItem(BaseModel):
     score: Optional[float] = None
     answer_overlap: Optional[float] = Field(
         default=None,
-        description="Lexical overlap score against the final answer (0.0 to 1.0). None if answer is unavailable."
+        description="Lexical overlap score against final answer (0.0 to 1.0). None if answer is unavailable."
     )
     metadata: Dict[str, Any] = Field(default_factory=dict)
 
