@@ -23,6 +23,8 @@ from pydantic import BaseModel
 from tracerag import config
 from tracerag.memory import GraphMemory
 from tracerag.router import shutdown_embed_executor
+from database import init_db
+from routers import history
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("graphsight.api")
@@ -32,10 +34,14 @@ _state: Dict[str, Any] = {}
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Startup: Initialize shared GraphMemory
+    # Startup: Initialize shared GraphMemory & History DB
     mem = GraphMemory(config.DB_PATH)
     _state["mem"] = mem
-    logger.info("GraphMemory initialized at %s", config.DB_PATH)
+    try:
+        init_db()
+        logger.info("History database initialized.")
+    except Exception as e:
+        logger.warning("History DB initialization failed: %s", e)
     yield
     # Shutdown: Cleanly stop background thread executors
     try:
@@ -51,6 +57,8 @@ app = FastAPI(
     description="Context intelligence & GraphRAG retrieval engine for AI agents",
     lifespan=lifespan,
 )
+
+app.include_router(history.router)
 
 app.add_middleware(
     CORSMiddleware,
