@@ -40,3 +40,8 @@ venv.bak/
 .graphsight/
 *.lbug
 scratch/
+
+# Node dependencies
+node_modules/
+dist/
+.DS_Store
