@@ -35,15 +35,15 @@ Traditional RAG observability tools only record *what was retrieved*. **Graphsig
   - Modular `packages/` monorepo structure.
   - Define `RetrievedItem`, `RetrievalSpan`, and `AgentTrace` data models in `graphsight-tracer`.
   - Serialization to portable `.graphsight/` JSON format.
-- [ ] **Day 2: Zero-Cost Lexical Overlap Engine (`_text.py`)**
+- [x] **Day 2: Zero-Cost Lexical Overlap Engine (`_text.py`)**
   - Fast token intersection and lexical trace heuristic (zero LLM overhead).
-- [ ] **Day 3: Custom RAG Pipeline & Tracer Client (`capture.py`)**
+- [x] **Day 3: Custom RAG Pipeline & Tracer Client (`capture.py`)**
   - Capture traces from vanilla Python retrieval loops.
 - [ ] **Day 4: LangGraph & LangChain Callback Tracer (`tracer.py`)**
   - Automatic callback integration into agent state graphs.
-- [ ] **Day 5: Local Zero-Dependency Trace Viewer Server (`server.py`)**
+- [x] **Day 5: Local Zero-Dependency Trace Viewer Server (`server.py`)**
   - Python stdlib HTTP server for local inspection (`127.0.0.1:4630`).
-- [ ] **Day 6: CLI Tool (`cli.py`)**
+- [x] **Day 6: CLI Tool (`cli.py`)**
   - Terminal launcher command (`graphsight .graphsight/`).
 - [ ] **Day 7: Interactive Trace Studio UI (`graphsight-ui`)**
   - Visual DAG and itemized *Used vs. Ignored* chunk inspection.
