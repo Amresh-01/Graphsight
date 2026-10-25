@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphsight-pro-langgraph"
+version = "0.1.0"
+description = "Multi-framework agent retrieval tracing (LangGraph, LlamaIndex, CrewAI) rendered as interactive graphs with graphsight-pro."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amresh Chaurasiya", email = "amreshchaurasiya373@gmail.com" }]
+keywords = ["langgraph", "llamaindex", "crewai", "tracing", "observability", "rag", "retrieval", "agents"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "langchain-core>=0.3",
+]
+
+[project.urls]
+Repository = "https://github.com/Amresh-01/Graphsight"
+Documentation = "https://github.com/Amresh-01/Graphsight"
+
+[project.optional-dependencies]
+example = ["langgraph>=0.2"]
+llamaindex = ["llama-index-core>=0.10"]
+all = ["langgraph>=0.2", "llama-index-core>=0.10"]
+
+[project.scripts]
+graphsight-pro-github-trace = "graphsight_langgraph.github_ingest:main"
+
+[tool.setuptools.packages.find]
+include = ["graphsight_langgraph*"]

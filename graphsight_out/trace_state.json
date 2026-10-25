@@ -1,0 +1,316 @@
+{
+  "id": "trace_lg_1792926148849",
+  "query": "how does context forwarding work?",
+  "computedAt": "2026-10-25T11:02:28.849049+00:00",
+  "weights": {
+    "vector": 0.5,
+    "graph": 0.5,
+    "intent": "relational"
+  },
+  "confidence": {
+    "score": 0.333,
+    "uncertainty": 0.0,
+    "rationale": "External langgraph trace. Scores reported by the retriever; Graphsight does not recompute them."
+  },
+  "steps": [
+    {
+      "id": "01a172b9-e8ec-711a-a88b-87e33ab7c550",
+      "index": 0,
+      "title": "retrieve",
+      "detail": "node \u00b7 ok",
+      "status": "complete",
+      "badge": "node",
+      "durationMs": 2.6
+    },
+    {
+      "id": "01a172b9-e8ec-711a-a88b-87e4bbbde2ef",
+      "index": 1,
+      "title": "LexicalGraphRetriever",
+      "detail": "retriever \u00b7 ok",
+      "status": "complete",
+      "badge": "retriever",
+      "durationMs": 2.2,
+      "arm": "graph"
+    },
+    {
+      "id": "01a172b9-e8ef-7147-956c-2150b955a644",
+      "index": 2,
+      "title": "answer",
+      "detail": "node \u00b7 ok",
+      "status": "complete",
+      "badge": "node",
+      "durationMs": 0.0
+    }
+  ],
+  "metrics": {
+    "queryTimeSec": 0.007,
+    "nodesEvaluated": 10
+  },
+  "graph": {
+    "nodes": [
+      {
+        "id": "tkt_3882",
+        "label": "Issue #3882",
+        "type": "Ticket",
+        "active": true,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": 0.5,
+        "score": 0.5,
+        "meta": {
+          "subtitle": "overlaps the answer \u00b7 via langgraph",
+          "snippet": "Issue #3882 'Support redirecting `--help` to a man page' by LecrisUT (closed). ### Context We have a rather complicated `--help` documentation which would like to forward it to sphinx for the generation. We would still like to have the complete help shown initially, and the closest thing would be to redirect it to a `man ...` call similar to how `git ... --help` does. ### Current state It can be h",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pallets/click/issues/3882"
+        }
+      },
+      {
+        "id": "pr_3864",
+        "label": "PR #3864",
+        "type": "PR",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": 0.25,
+        "score": 0.25,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "PR #3864 '[rejected AI] Add usage to command info dicts' by pollychen-lab (closed). Add a `usage` field to command info dictionaries using `Command.get_usage(ctx)`, so documentation tooling consuming `Context.to_info_dict()` can include the generated usage line for root and nested commands. fixes #2992 Validation: - `uv run --locked pytest tests/test_info_dict.py -q --tb=short` - `uv run --locked ",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pallets/click/pull/3864"
+        }
+      },
+      {
+        "id": "tkt_3886",
+        "label": "Issue #3886",
+        "type": "Ticket",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": 0.25,
+        "score": 0.25,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "Issue #3886 'Prevent Click from terminating when less is interrupted' by tucked (open). Today, if I stream output to `less` from Click, I can enter follow mode (`F`): > ``` > F Scroll forward, and keep trying to read when the end of file is reached. Normally this command would be used when already at the end of the file. It is a way to monitor the > tail of a file which is growing while it is bein",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pallets/click/issues/3886"
+        }
+      },
+      {
+        "id": "pr_3884",
+        "label": "PR #3884",
+        "type": "PR",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": null,
+        "score": null,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "PR #3884 'Fix `show_envvar` output for a sequence or an empty `envvar`' by kdeldycke (merged). This PR fixes some awkward rendering in the `Error: Invalid value for '--units' (env var: xxxxx)` error message's hint for special cases of environment variables: | Parameter value | Hint before | Hint after | | --- | --- | --- | | `envvar=None` | Nothing | Nothing | | `envvar=\"\"` | `(env var: '')` | Not",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pallets/click/pull/3884"
+        }
+      },
+      {
+        "id": "pr_3782",
+        "label": "PR #3782",
+        "type": "PR",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": null,
+        "score": null,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "PR #3782 '[rejected AI] Do not break usage line arguments at a hyphen' by fahadhewad (closed). The usage line wrapped its arguments with textwrap's break_on_hyphens behaviour enabled, so an option name or metavar that reached the wrap width was split across two lines at an internal hyphen, for example --max- on one line and retry-count on the next. HelpFormatter.write_usage now wraps the arguments",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pallets/click/pull/3782"
+        }
+      },
+      {
+        "id": "repo_click",
+        "label": "click",
+        "type": "Repo",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": null,
+        "score": null,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "pallets/click: Python composable command line interface toolkit. Primary language Python, 17801 stars, 86 open issues.",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pallets/click"
+        }
+      },
+      {
+        "id": "person_pollychen-lab",
+        "label": "pollychen-lab",
+        "type": "Person",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": null,
+        "score": null,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "GitHub user pollychen-lab authored 1 of the recent changes (PRs/commits) in pallets/click.",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pollychen-lab"
+        }
+      },
+      {
+        "id": "person_kdeldycke",
+        "label": "kdeldycke",
+        "type": "Person",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": null,
+        "score": null,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "GitHub user kdeldycke authored 22 of the recent changes (PRs/commits) in pallets/click.",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/kdeldycke"
+        }
+      },
+      {
+        "id": "person_fahadhewad",
+        "label": "fahadhewad",
+        "type": "Person",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": null,
+        "score": null,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "GitHub user fahadhewad authored 1 of the recent changes (PRs/commits) in pallets/click.",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/fahadhewad"
+        }
+      },
+      {
+        "id": "tkt_3362",
+        "label": "Issue #3362",
+        "type": "Ticket",
+        "active": false,
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "similarity": null,
+        "score": null,
+        "meta": {
+          "subtitle": "no lexical trace in answer \u00b7 via langgraph",
+          "snippet": "Issue #3362 '`HelpFormatter.write_usage` breaks options at a hyphen' by Melebius (open). If an option containing a hyphen in its name is printed at the line break limit, it\u2019s broken at the hyphen. ### Reproduction ```python import click options = [ \"--enable-verbose-logging\", \"--output-file-path\", \"--max-retry-count\", \"--disable-cache-mode\", \"--config-file-location\", \"--user-auth-token\", \"--auto-u",
+          "scoreGraph": null,
+          "sourceUrl": "https://github.com/pallets/click/issues/3362"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "e_01a172b9_0",
+        "source": "tkt_3882",
+        "target": "repo_click",
+        "confidence": 0.6,
+        "active": false,
+        "relation": "REPORTS_ON"
+      },
+      {
+        "id": "e_01a172b9_1",
+        "source": "pr_3864",
+        "target": "repo_click",
+        "confidence": 0.7,
+        "active": false,
+        "relation": "TOUCHES"
+      },
+      {
+        "id": "e_01a172b9_2",
+        "source": "person_pollychen-lab",
+        "target": "pr_3864",
+        "confidence": 0.9,
+        "active": false,
+        "relation": "AUTHORED"
+      },
+      {
+        "id": "e_01a172b9_3",
+        "source": "tkt_3886",
+        "target": "repo_click",
+        "confidence": 0.6,
+        "active": false,
+        "relation": "REPORTS_ON"
+      },
+      {
+        "id": "e_01a172b9_4",
+        "source": "pr_3884",
+        "target": "repo_click",
+        "confidence": 0.7,
+        "active": false,
+        "relation": "TOUCHES"
+      },
+      {
+        "id": "e_01a172b9_5",
+        "source": "person_kdeldycke",
+        "target": "pr_3884",
+        "confidence": 0.9,
+        "active": false,
+        "relation": "AUTHORED"
+      },
+      {
+        "id": "e_01a172b9_6",
+        "source": "pr_3782",
+        "target": "repo_click",
+        "confidence": 0.7,
+        "active": false,
+        "relation": "TOUCHES"
+      },
+      {
+        "id": "e_01a172b9_7",
+        "source": "person_fahadhewad",
+        "target": "pr_3782",
+        "confidence": 0.9,
+        "active": false,
+        "relation": "AUTHORED"
+      },
+      {
+        "id": "e_01a172b9_8",
+        "source": "pr_3782",
+        "target": "tkt_3362",
+        "confidence": 0.85,
+        "active": false,
+        "relation": "RESOLVES"
+      },
+      {
+        "id": "e_01a172b9_9",
+        "source": "tkt_3362",
+        "target": "repo_click",
+        "confidence": 0.6,
+        "active": false,
+        "relation": "REPORTS_ON"
+      }
+    ]
+  },
+  "context": "Issue #3882 'Support redirecting `--help` to a man page' by LecrisUT (closed). ### Context We have a rather complicated `--help` documentation which would like to forward it to sphinx for the generation. We would still like to have the complete help shown initially, and the closest thing would be to redirect it to a `man ...` call similar to how `git ... --help` does. ### Current state It can be h\n\nPR #3864 '[rejected AI] Add usage to command info dicts' by pollychen-lab (closed). Add a `usage` field to command info dictionaries using `Command.get_usage(ctx)`, so documentation tooling consuming `Context.to_info_dict()` can include the generated usage line for root and nested commands. fixes #2992 Validation: - `uv run --locked pytest tests/test_info_dict.py -q --tb=short` - `uv run --locked \n\nIssue #3886 'Prevent Click from terminating when less is interrupted' by tucked (open). Today, if I stream output to `less` from Click, I can enter follow mode (`F`): > ``` > F Scroll forward, and keep trying to read when the end of file is reached. Normally this command would be used when already at the end of the file. It is a way to monitor the > tail of a file which is growing while it is bein\n\nPR #3884 'Fix `show_envvar` output for a sequence or an empty `envvar`' by kdeldycke (merged). This PR fixes some awkward rendering in the `Error: Invalid value for '--units' (env var: xxxxx)` error message's hint for special cases of environment variables: | Parameter value | Hint before | Hint after | | --- | --- | --- | | `envvar=None` | Nothing | Nothing | | `envvar=\"\"` | `(env var: '')` | Not\n\nPR #3782 '[rejected AI] Do not break usage line arguments at a hyphen' by fahadhewad (closed). The usage line wrapped its arguments with textwrap's break_on_hyphens behaviour enabled, so an option name or metavar that reached the wrap width was split across two lines at an internal hyphen, for example --max- on one line and retry-count on the next. HelpFormatter.write_usage now wraps the arguments\n\npallets/click: Python composable command line interface toolkit. Primary language Python, 17801 stars, 86 open issues.\n\nGitHub user pollychen-lab authored 1 of the recent changes (PRs/commits) in pallets/click.\n\nGitHub user kdeldycke authored 22 of the recent changes (PRs/commits) in pallets/click.\n\nGitHub user fahadhewad authored 1 of the recent changes (PRs/commits) in pallets/click.\n\nIssue #3362 '`HelpFormatter.write_usage` breaks options at a hyphen' by Melebius (open). If an option containing a hyphen in its name is printed at the line break limit, it\u2019s broken at the hyphen. ### Reproduction ```python import click options = [ \"--enable-verbose-logging\", \"--output-file-path\", \"--max-retry-count\", \"--disable-cache-mode\", \"--config-file-location\", \"--user-auth-token\", \"--auto-u"
+}

@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "graphsight-pro"
+version = "0.1.0"
+description = "Interactive graph viewer for AI agent retrieval traces (LangGraph, LlamaIndex, CrewAI). One command, zero dependencies, nothing leaves your machine."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Amresh Chaurasiya", email = "amreshchaurasiya373@gmail.com" }]
+keywords = ["tracing", "observability", "rag", "retrieval", "agents", "visualization", "langgraph", "llamaindex", "crewai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# stdlib-only on purpose: http.server + webbrowser
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/Amresh-01/Graphsight"
+Documentation = "https://github.com/Amresh-01/Graphsight"
+
+[project.scripts]
+graphsight-pro = "graphsight.cli:main"
+graphsight = "graphsight.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["graphsight*"]
+
+[tool.setuptools.package-data]
+graphsight = ["dist/**/*"]

@@ -1,0 +1,280 @@
+{
+  "query": "how does context forwarding work?",
+  "framework": "langgraph",
+  "schema_version": "0.2",
+  "spans": [
+    {
+      "id": "01a172b9-e8ec-711a-a88b-87e33ab7c550",
+      "name": "retrieve",
+      "kind": "node",
+      "parent_id": "01a172b9-e8eb-7301-8d99-cf9af8644451",
+      "start_ms": 3.76029999461025,
+      "end_ms": 6.318599975202233,
+      "status": "ok"
+    },
+    {
+      "id": "01a172b9-e8ec-711a-a88b-87e4bbbde2ef",
+      "name": "LexicalGraphRetriever",
+      "kind": "retriever",
+      "parent_id": "01a172b9-e8ec-711a-a88b-87e33ab7c550",
+      "start_ms": 3.978899971116334,
+      "end_ms": 6.212599982973188,
+      "status": "ok"
+    },
+    {
+      "id": "01a172b9-e8ef-7147-956c-2150b955a644",
+      "name": "answer",
+      "kind": "node",
+      "parent_id": "01a172b9-e8eb-7301-8d99-cf9af8644451",
+      "start_ms": 6.613299949094653,
+      "end_ms": 6.661399966105819,
+      "status": "ok"
+    }
+  ],
+  "retrievals": [
+    {
+      "span_id": "01a172b9-e8ec-711a-a88b-87e4bbbde2ef",
+      "query": "how does context forwarding work?",
+      "arm": "graph",
+      "items": [
+        {
+          "id": "tkt_3882",
+          "label": "Issue #3882",
+          "kind": "ticket",
+          "score": 0.5,
+          "vector_score": 0.5,
+          "graph_score": null,
+          "content": "Issue #3882 'Support redirecting `--help` to a man page' by LecrisUT (closed). ### Context We have a rather complicated `--help` documentation which would like to forward it to sphinx for the generation. We would still like to have the complete help shown initially, and the closest thing would be to redirect it to a `man ...` call similar to how `git ... --help` does. ### Current state It can be h",
+          "source_uri": "https://github.com/pallets/click/issues/3882",
+          "metadata": {
+            "id": "tkt_3882",
+            "label": "Issue #3882",
+            "kind": "ticket",
+            "source": "https://github.com/pallets/click/issues/3882",
+            "score": 0.5
+          },
+          "answer_overlap": 0.511
+        },
+        {
+          "id": "pr_3864",
+          "label": "PR #3864",
+          "kind": "pull_request",
+          "score": 0.25,
+          "vector_score": 0.25,
+          "graph_score": null,
+          "content": "PR #3864 '[rejected AI] Add usage to command info dicts' by pollychen-lab (closed). Add a `usage` field to command info dictionaries using `Command.get_usage(ctx)`, so documentation tooling consuming `Context.to_info_dict()` can include the generated usage line for root and nested commands. fixes #2992 Validation: - `uv run --locked pytest tests/test_info_dict.py -q --tb=short` - `uv run --locked ",
+          "source_uri": "https://github.com/pallets/click/pull/3864",
+          "metadata": {
+            "id": "pr_3864",
+            "label": "PR #3864",
+            "kind": "pull_request",
+            "source": "https://github.com/pallets/click/pull/3864",
+            "score": 0.25
+          },
+          "answer_overlap": 0.088
+        },
+        {
+          "id": "tkt_3886",
+          "label": "Issue #3886",
+          "kind": "ticket",
+          "score": 0.25,
+          "vector_score": 0.25,
+          "graph_score": null,
+          "content": "Issue #3886 'Prevent Click from terminating when less is interrupted' by tucked (open). Today, if I stream output to `less` from Click, I can enter follow mode (`F`): > ``` > F Scroll forward, and keep trying to read when the end of file is reached. Normally this command would be used when already at the end of the file. It is a way to monitor the > tail of a file which is growing while it is bein",
+          "source_uri": "https://github.com/pallets/click/issues/3886",
+          "metadata": {
+            "id": "tkt_3886",
+            "label": "Issue #3886",
+            "kind": "ticket",
+            "source": "https://github.com/pallets/click/issues/3886",
+            "score": 0.25
+          },
+          "answer_overlap": 0.086
+        },
+        {
+          "id": "pr_3884",
+          "label": "PR #3884",
+          "kind": "pull_request",
+          "score": null,
+          "vector_score": null,
+          "graph_score": null,
+          "content": "PR #3884 'Fix `show_envvar` output for a sequence or an empty `envvar`' by kdeldycke (merged). This PR fixes some awkward rendering in the `Error: Invalid value for '--units' (env var: xxxxx)` error message's hint for special cases of environment variables: | Parameter value | Hint before | Hint after | | --- | --- | --- | | `envvar=None` | Nothing | Nothing | | `envvar=\"\"` | `(env var: '')` | Not",
+          "source_uri": "https://github.com/pallets/click/pull/3884",
+          "metadata": {
+            "id": "pr_3884",
+            "label": "PR #3884",
+            "kind": "pull_request",
+            "source": "https://github.com/pallets/click/pull/3884"
+          },
+          "answer_overlap": 0.035
+        },
+        {
+          "id": "pr_3782",
+          "label": "PR #3782",
+          "kind": "pull_request",
+          "score": null,
+          "vector_score": null,
+          "graph_score": null,
+          "content": "PR #3782 '[rejected AI] Do not break usage line arguments at a hyphen' by fahadhewad (closed). The usage line wrapped its arguments with textwrap's break_on_hyphens behaviour enabled, so an option name or metavar that reached the wrap width was split across two lines at an internal hyphen, for example --max- on one line and retry-count on the next. HelpFormatter.write_usage now wraps the arguments",
+          "source_uri": "https://github.com/pallets/click/pull/3782",
+          "metadata": {
+            "id": "pr_3782",
+            "label": "PR #3782",
+            "kind": "pull_request",
+            "source": "https://github.com/pallets/click/pull/3782"
+          },
+          "answer_overlap": 0.04
+        },
+        {
+          "id": "repo_click",
+          "label": "click",
+          "kind": "repo",
+          "score": null,
+          "vector_score": null,
+          "graph_score": null,
+          "content": "pallets/click: Python composable command line interface toolkit. Primary language Python, 17801 stars, 86 open issues.",
+          "source_uri": "https://github.com/pallets/click",
+          "metadata": {
+            "id": "repo_click",
+            "label": "click",
+            "kind": "repo",
+            "source": "https://github.com/pallets/click"
+          },
+          "answer_overlap": 0.129
+        },
+        {
+          "id": "person_pollychen-lab",
+          "label": "pollychen-lab",
+          "kind": "person",
+          "score": null,
+          "vector_score": null,
+          "graph_score": null,
+          "content": "GitHub user pollychen-lab authored 1 of the recent changes (PRs/commits) in pallets/click.",
+          "source_uri": "https://github.com/pollychen-lab",
+          "metadata": {
+            "id": "person_pollychen-lab",
+            "label": "pollychen-lab",
+            "kind": "person",
+            "source": "https://github.com/pollychen-lab"
+          },
+          "answer_overlap": 0.121
+        },
+        {
+          "id": "person_kdeldycke",
+          "label": "kdeldycke",
+          "kind": "person",
+          "score": null,
+          "vector_score": null,
+          "graph_score": null,
+          "content": "GitHub user kdeldycke authored 22 of the recent changes (PRs/commits) in pallets/click.",
+          "source_uri": "https://github.com/kdeldycke",
+          "metadata": {
+            "id": "person_kdeldycke",
+            "label": "kdeldycke",
+            "kind": "person",
+            "source": "https://github.com/kdeldycke"
+          },
+          "answer_overlap": 0.114
+        },
+        {
+          "id": "person_fahadhewad",
+          "label": "fahadhewad",
+          "kind": "person",
+          "score": null,
+          "vector_score": null,
+          "graph_score": null,
+          "content": "GitHub user fahadhewad authored 1 of the recent changes (PRs/commits) in pallets/click.",
+          "source_uri": "https://github.com/fahadhewad",
+          "metadata": {
+            "id": "person_fahadhewad",
+            "label": "fahadhewad",
+            "kind": "person",
+            "source": "https://github.com/fahadhewad"
+          },
+          "answer_overlap": 0.121
+        },
+        {
+          "id": "tkt_3362",
+          "label": "Issue #3362",
+          "kind": "ticket",
+          "score": null,
+          "vector_score": null,
+          "graph_score": null,
+          "content": "Issue #3362 '`HelpFormatter.write_usage` breaks options at a hyphen' by Melebius (open). If an option containing a hyphen in its name is printed at the line break limit, it\u2019s broken at the hyphen. ### Reproduction ```python import click options = [ \"--enable-verbose-logging\", \"--output-file-path\", \"--max-retry-count\", \"--disable-cache-mode\", \"--config-file-location\", \"--user-auth-token\", \"--auto-u",
+          "source_uri": "https://github.com/pallets/click/issues/3362",
+          "metadata": {
+            "id": "tkt_3362",
+            "label": "Issue #3362",
+            "kind": "ticket",
+            "source": "https://github.com/pallets/click/issues/3362"
+          },
+          "answer_overlap": 0.095
+        }
+      ],
+      "edges": [
+        {
+          "source": "tkt_3882",
+          "target": "repo_click",
+          "relation": "REPORTS_ON",
+          "weight": 0.6
+        },
+        {
+          "source": "pr_3864",
+          "target": "repo_click",
+          "relation": "TOUCHES",
+          "weight": 0.7
+        },
+        {
+          "source": "person_pollychen-lab",
+          "target": "pr_3864",
+          "relation": "AUTHORED",
+          "weight": 0.9
+        },
+        {
+          "source": "tkt_3886",
+          "target": "repo_click",
+          "relation": "REPORTS_ON",
+          "weight": 0.6
+        },
+        {
+          "source": "pr_3884",
+          "target": "repo_click",
+          "relation": "TOUCHES",
+          "weight": 0.7
+        },
+        {
+          "source": "person_kdeldycke",
+          "target": "pr_3884",
+          "relation": "AUTHORED",
+          "weight": 0.9
+        },
+        {
+          "source": "pr_3782",
+          "target": "repo_click",
+          "relation": "TOUCHES",
+          "weight": 0.7
+        },
+        {
+          "source": "person_fahadhewad",
+          "target": "pr_3782",
+          "relation": "AUTHORED",
+          "weight": 0.9
+        },
+        {
+          "source": "pr_3782",
+          "target": "tkt_3362",
+          "relation": "RESOLVES",
+          "weight": 0.85
+        },
+        {
+          "source": "tkt_3362",
+          "target": "repo_click",
+          "relation": "REPORTS_ON",
+          "weight": 0.6
+        }
+      ]
+    }
+  ],
+  "answer": "Top match in pallets/click: Issue #3882. Issue #3882 'Support redirecting `--help` to a man page' by LecrisUT (closed). ### Context We have a rather complicated `--help` documentation which would like \u2026 Retrieved 10 items (3 person(s), 3 pull request(s), 1 repo(s), 3 ticket(s)); open the graph to see who and what they connect to.",
+  "latency_ms": 6.661399966105819
+}
