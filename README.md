@@ -39,7 +39,7 @@ Traditional RAG observability tools only record *what was retrieved*. **Graphsig
   - Fast token intersection and lexical trace heuristic (zero LLM overhead).
 - [x] **Day 3: Custom RAG Pipeline & Tracer Client (`capture.py`)**
   - Capture traces from vanilla Python retrieval loops.
-- [ ] **Day 4: LangGraph & LangChain Callback Tracer (`tracer.py`)**
+- [x] **Day 4: LangGraph & LangChain Callback Tracer (`tracer.py`)**
   - Automatic callback integration into agent state graphs.
 - [x] **Day 5: Local Zero-Dependency Trace Viewer Server (`server.py`)**
   - Python stdlib HTTP server for local inspection (`127.0.0.1:4630`).
