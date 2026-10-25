@@ -17,6 +17,11 @@ DB_PATH = Path(os.getenv("TRACERAG_DB_PATH", PROJECT_ROOT / "memory.lbug"))
 DATASETS_DIR = Path(os.getenv("TRACERAG_DATASETS_DIR", PROJECT_ROOT / "datasets"))
 RESULTS_CSV = Path(os.getenv("TRACERAG_RESULTS_CSV", PROJECT_ROOT / "results.csv"))
 
+# Multi-tenancy & Pod identity
+MULTI_TENANCY_ENABLED = os.getenv("MULTI_TENANCY_ENABLED", "0") in ("1", "true", "True")
+DEFAULT_TENANT_ORG_ID = os.getenv("DEFAULT_TENANT_ORG_ID", "org_local_dev")
+POD_ID = os.getenv("POD_ID", "pod-local-dev")
+
 EMBED_MODEL = os.getenv("TRACERAG_EMBED_MODEL", "all-MiniLM-L6-v2")
 EMBED_DIM = 384  # 384-dimensional dense vectors
 EMBED_WORKERS = int(os.getenv("TRACERAG_EMBED_WORKERS", "4"))
