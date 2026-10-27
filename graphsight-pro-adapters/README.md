@@ -284,7 +284,7 @@ stay thin.
 ## Links
 
 - Source & issue tracker: [github.com/Kcodess2807/graphsight](https://github.com/Kcodess2807/graphsight)
-- The viewer: [graphsight on PyPI](https://pypi.org/project/graphsight/)
+- The viewer: [graphsight-pro on PyPI](https://pypi.org/project/graphsight-pro/)
 - Beta test script: [BETA.md](https://github.com/Kcodess2807/graphsight/blob/main/BETA.md)
 
 ## License

@@ -884,7 +884,7 @@ export function LandingPage() {
               Live demo
             </Link>
             <a
-              href="https://pypi.org/project/graphsight/"
+              href="https://pypi.org/project/graphsight-pro/"
               target="_blank"
               rel="noreferrer"
               className="hidden rounded-lg px-3 py-1.5 text-sm font-semibold text-zinc-600 transition-colors duration-150 hover:bg-zinc-100 hover:text-[#131316] sm:block"

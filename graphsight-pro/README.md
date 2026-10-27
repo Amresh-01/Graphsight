@@ -1,7 +1,7 @@
 # graphsight
 
-[![PyPI](https://img.shields.io/pypi/v/graphsight.svg)](https://pypi.org/project/graphsight/)
-[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://pypi.org/project/graphsight/)
+[![PyPI](https://img.shields.io/pypi/v/graphsight-pro.svg)](https://pypi.org/project/graphsight-pro/)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://pypi.org/project/graphsight-pro/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)](https://github.com/Kcodess2807/graphsight/blob/main/graphsight/LICENSE)
 
 **See which retrieved documents your agent actually used, and which it ignored.**
